@@ -8,39 +8,6 @@
 import Foundation
 import SwiftUI
 
-struct URLImage: View {
-    let urlString: String
-    @State var data: Data?
-    
-    var body: some View {
-        if let data = data, let uiimage = UIImage(data: data) {
-            Image(uiImage: uiimage)
-                .resizable()
-                .frame(width: 140, height: 200)
-                .aspectRatio(contentMode: .fill)
-        }
-        else {
-            Image(systemName: "image")
-                .resizable()
-                .frame(width: 140, height: 200)
-                .aspectRatio(contentMode: .fill)
-                .onAppear {
-                    fetchImage()
-                }
-        }
-    }
-    
-    private func fetchImage() {
-        guard let url = URL(string: urlString) else {
-            return
-        }
-        
-        let task = URLSession.shared.dataTask(with: url) { data, _, _ in self.data = data
-        }
-        task.resume()
-    }
-}
-
 func getData() async throws -> [Movie] {
     let authKey = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNTY2MzJjNzdkYTY2MDY3MjE1ZDAzMWVhYzRjM2EzMSIsInN1YiI6IjY0Y2VhMjU3ODUwOTBmMDE0NDViMzE1MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fx1pPJVFe6PwaR4imdMD9TKllC7zDvmeCaRGzJxNKh4"
     let endpoint = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1"
@@ -53,7 +20,7 @@ func getData() async throws -> [Movie] {
     request.addValue("Bearer \(authKey)", forHTTPHeaderField: "Authorization")
 
     let (data, response) = try await URLSession.shared.data(for: request)
-    
+
     guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
         throw Errors.invalidResponse
     }
