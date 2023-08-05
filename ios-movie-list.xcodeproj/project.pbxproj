@@ -14,6 +14,7 @@
 		1BA3598D2A7ED47B00A495C0 /* ios_movie_listTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA3598C2A7ED47B00A495C0 /* ios_movie_listTests.swift */; };
 		1BA359972A7ED47B00A495C0 /* ios_movie_listUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA359962A7ED47B00A495C0 /* ios_movie_listUITests.swift */; };
 		1BA359992A7ED47B00A495C0 /* ios_movie_listUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA359982A7ED47B00A495C0 /* ios_movie_listUITestsLaunchTests.swift */; };
+		1BA359A62A7EE32100A495C0 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA359A52A7EE32100A495C0 /* Services.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		1BA359922A7ED47B00A495C0 /* ios-movie-listUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-movie-listUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA359962A7ED47B00A495C0 /* ios_movie_listUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_movie_listUITests.swift; sourceTree = "<group>"; };
 		1BA359982A7ED47B00A495C0 /* ios_movie_listUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_movie_listUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1BA359A52A7EE32100A495C0 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				1BA3597B2A7ED47900A495C0 /* ios_movie_listApp.swift */,
 				1BA3597D2A7ED47900A495C0 /* ContentView.swift */,
+				1BA359A52A7EE32100A495C0 /* Services.swift */,
 				1BA3597F2A7ED47B00A495C0 /* Assets.xcassets */,
 				1BA359812A7ED47B00A495C0 /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BA3597E2A7ED47900A495C0 /* ContentView.swift in Sources */,
+				1BA359A62A7EE32100A495C0 /* Services.swift in Sources */,
 				1BA3597C2A7ED47900A495C0 /* ios_movie_listApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
