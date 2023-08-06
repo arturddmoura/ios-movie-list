@@ -6,9 +6,18 @@
 //
 
 import SwiftUI
+import SimpleToast
 
 struct FavoritesView: View {
     @EnvironmentObject var database: InMemoryDatabase
+    @State private var showToast = false
+    @State private var value = 0
+
+    private let toastOptions = SimpleToastOptions(
+        hideAfter: 1,
+        animation: .linear,
+        modifierType: .slide
+    )
 
     var body: some View {
         NavigationView {
@@ -38,6 +47,7 @@ struct FavoritesView: View {
                             }
                         }
                         Button {
+                            showToast.toggle()
                             database.deleteItem(for: item.id)
                         } label: {
                             Text("Remove from your favorites")
@@ -45,6 +55,14 @@ struct FavoritesView: View {
                         }
                         .contentShape(Rectangle())
                     }
+                }
+                .simpleToast(isPresented: $showToast, options: toastOptions) {
+                    Label("Removed from your favourites.", systemImage: "minus.circle.fill")
+                    .padding()
+                    .background(Color.red.opacity(0.8))
+                    .foregroundColor(Color.white)
+                    .cornerRadius(10)
+                    .padding(.top)
                 }
                 .navigationBarTitle("FIAP Favorites")
             }

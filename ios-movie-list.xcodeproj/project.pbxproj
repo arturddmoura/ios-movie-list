@@ -22,6 +22,7 @@
 		1BA359B42A7EF55A00A495C0 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA359B32A7EF55A00A495C0 /* ImageService.swift */; };
 		1BA359B62A7EF5B300A495C0 /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA359B52A7EF5B300A495C0 /* PeopleService.swift */; };
 		1BA359B82A7F08F100A495C0 /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA359B72A7F08F100A495C0 /* FavoritesService.swift */; };
+		1BA359BD2A7F201600A495C0 /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 1BA359BC2A7F201600A495C0 /* SimpleToast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA359BD2A7F201600A495C0 /* SimpleToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +169,9 @@
 			dependencies = (
 			);
 			name = "ios-movie-list";
+			packageProductDependencies = (
+				1BA359BC2A7F201600A495C0 /* SimpleToast */,
+			);
 			productName = "ios-movie-list";
 			productReference = 1BA359782A7ED47900A495C0 /* ios-movie-list.app */;
 			productType = "com.apple.product-type.application";
@@ -239,6 +244,9 @@
 				Base,
 			);
 			mainGroup = 1BA3596F2A7ED47900A495C0;
+			packageReferences = (
+				1BA359BB2A7F201600A495C0 /* XCRemoteSwiftPackageReference "SimpleToast" */,
+			);
 			productRefGroup = 1BA359792A7ED47900A495C0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -609,6 +617,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1BA359BB2A7F201600A495C0 /* XCRemoteSwiftPackageReference "SimpleToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sanzaru/SimpleToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1BA359BC2A7F201600A495C0 /* SimpleToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BA359BB2A7F201600A495C0 /* XCRemoteSwiftPackageReference "SimpleToast" */;
+			productName = SimpleToast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1BA359702A7ED47900A495C0 /* Project object */;
 }

@@ -6,10 +6,19 @@
 //
 
 import SwiftUI
+import SimpleToast
 
 struct MovieView: View {
     @State private var movies: [Movie] = []
     @EnvironmentObject var database: InMemoryDatabase
+    @State private var showToast = false
+    @State private var value = 0
+
+    private let toastOptions = SimpleToastOptions(
+        hideAfter: 1,
+        animation: .linear,
+        modifierType: .slide
+    )
 
     var body: some View {
         NavigationView {
@@ -25,6 +34,7 @@ struct MovieView: View {
                                 .lineLimit(6)
                         }
                         Button {
+                            showToast.toggle()
                             database.addItem(title: movie.title, description: movie.overview, image: "\(movie.posterPath ?? "")")
                         } label: {
                             Text("Add to your favorites").padding(.top, 10)
@@ -32,7 +42,14 @@ struct MovieView: View {
                         .contentShape(Rectangle())
                     }.padding(10)
                 }.navigationTitle("FIAP Movie List")
-                
+            }
+            .simpleToast(isPresented: $showToast, options: toastOptions) {
+                Label("Added to your favourites.", systemImage: "burst.fill")
+                .padding()
+                .background(Color.green.opacity(0.8))
+                .foregroundColor(Color.white)
+                .cornerRadius(10)
+                .padding(.top)
             }
             .task{
                 do {
