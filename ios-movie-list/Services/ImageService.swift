@@ -21,10 +21,10 @@ struct URLImage: View {
                 .padding(.bottom, 10)
         }
         else {
-            Image(systemName: "video")
+            Image("")
                 .resizable()
                 .frame(width: 140, height: 200)
-                .aspectRatio(contentMode: .fill)
+                .aspectRatio(contentMode: .fit)
                 .padding(.bottom, 10)
                 .onAppear {
                     fetchImage()
