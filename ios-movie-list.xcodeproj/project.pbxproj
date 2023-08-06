@@ -112,16 +112,11 @@
 		1BA3597A2A7ED47900A495C0 /* ios-movie-list */ = {
 			isa = PBXGroup;
 			children = (
-				1BA3597B2A7ED47900A495C0 /* ios_movie_listApp.swift */,
 				1BA3597D2A7ED47900A495C0 /* ContentView.swift */,
-				1BA359AB2A7EF00500A495C0 /* MovieView.swift */,
-				1BA359AD2A7EF2A300A495C0 /* PeopleView.swift */,
-				1BA359AF2A7EF2F100A495C0 /* FavoritesView.swift */,
-				1BA359B72A7F08F100A495C0 /* FavoritesService.swift */,
-				1BA359A52A7EE32100A495C0 /* MovieService.swift */,
-				1BA359B52A7EF5B300A495C0 /* PeopleService.swift */,
-				1BA359B32A7EF55A00A495C0 /* ImageService.swift */,
-				1BA359A92A7EEA7B00A495C0 /* NavigationBar.swift */,
+				1BA3597B2A7ED47900A495C0 /* ios_movie_listApp.swift */,
+				1BA359C02A7F25DD00A495C0 /* Tabs */,
+				1BA359C12A7F25E700A495C0 /* Services */,
+				1BA359C22A7F25F600A495C0 /* Components */,
 				1BA3597F2A7ED47B00A495C0 /* Assets.xcassets */,
 				1BA359812A7ED47B00A495C0 /* Preview Content */,
 			);
@@ -151,6 +146,35 @@
 				1BA359982A7ED47B00A495C0 /* ios_movie_listUITestsLaunchTests.swift */,
 			);
 			path = "ios-movie-listUITests";
+			sourceTree = "<group>";
+		};
+		1BA359C02A7F25DD00A495C0 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				1BA359AB2A7EF00500A495C0 /* MovieView.swift */,
+				1BA359AD2A7EF2A300A495C0 /* PeopleView.swift */,
+				1BA359AF2A7EF2F100A495C0 /* FavoritesView.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		1BA359C12A7F25E700A495C0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1BA359B72A7F08F100A495C0 /* FavoritesService.swift */,
+				1BA359A52A7EE32100A495C0 /* MovieService.swift */,
+				1BA359B52A7EF5B300A495C0 /* PeopleService.swift */,
+				1BA359B32A7EF55A00A495C0 /* ImageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1BA359C22A7F25F600A495C0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1BA359A92A7EEA7B00A495C0 /* NavigationBar.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
