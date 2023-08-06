@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PeopleView: View {
     @State private var people: [Person] = []
+    @EnvironmentObject var database: InMemoryDatabase
 
     var body: some View {
         NavigationView {
@@ -22,6 +23,12 @@ struct PeopleView: View {
                                 .multilineTextAlignment(.leading)
                                 .lineLimit(6)
                         }
+                        Button {
+                            database.addItem(title: person.name, description: "Known for: \(person.knownForDepartment ?? "Not informed")", image: "\(person.profilePath ?? "")")
+                        } label: {
+                            Text("Add to your favorites").padding(.top, 10)
+                        }
+                        .contentShape(Rectangle())
                     }.padding(10)
                 }.navigationTitle("FIAP Celebrities List")
             }
@@ -32,13 +39,13 @@ struct PeopleView: View {
                     print("Error: \(error)")
                     print("Unexpected error")
                 }
-            }
+            }.environmentObject(database)
         }
     }
 }
 
 struct PeopleView_Previews: PreviewProvider {
     static var previews: some View {
-        PeopleView()
+        PeopleView().environmentObject(InMemoryDatabase())
     }
 }

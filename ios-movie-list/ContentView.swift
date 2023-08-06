@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selectedTab: Tab = .tv
-    
+        
     init() {
         UITabBar.appearance().isHidden = true
     }
@@ -37,10 +37,12 @@ struct ContentView: View {
             }
         }
     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(InMemoryDatabase())
+
     }
 }

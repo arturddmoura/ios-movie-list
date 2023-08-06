@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MovieView: View {
     @State private var movies: [Movie] = []
+    @EnvironmentObject var database: InMemoryDatabase
 
     var body: some View {
         NavigationView {
@@ -22,16 +23,16 @@ struct MovieView: View {
                                 .font(.body)
                                 .multilineTextAlignment(.leading)
                                 .lineLimit(6)
-                            Button {
-                                print("\(movie.title) \(movie.overview) \(movie.posterPath ?? "")")
-                            } label: {
-                                Text("Add to favorites")
-                                    .padding(.top, 20)
-                            }
-                            .contentShape(Rectangle())
                         }
+                        Button {
+                            database.addItem(title: movie.title, description: movie.overview, image: "\(movie.posterPath ?? "")")
+                        } label: {
+                            Text("Add to your favorites").padding(.top, 10)
+                        }
+                        .contentShape(Rectangle())
                     }.padding(10)
                 }.navigationTitle("FIAP Movie List")
+                
             }
             .task{
                 do {
@@ -40,12 +41,13 @@ struct MovieView: View {
                     print("Unexpected error")
                 }
             }
-        }
+        }.environmentObject(database)
     }
 }
 
 struct MovieView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieView()
+        MovieView().environmentObject(InMemoryDatabase())
+
     }
 }

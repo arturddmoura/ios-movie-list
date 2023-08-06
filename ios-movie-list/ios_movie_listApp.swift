@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct ios_movie_listApp: App {
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(InMemoryDatabase())
         }
     }
 }

@@ -21,6 +21,7 @@
 		1BA359B02A7EF2F100A495C0 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA359AF2A7EF2F100A495C0 /* FavoritesView.swift */; };
 		1BA359B42A7EF55A00A495C0 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA359B32A7EF55A00A495C0 /* ImageService.swift */; };
 		1BA359B62A7EF5B300A495C0 /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA359B52A7EF5B300A495C0 /* PeopleService.swift */; };
+		1BA359B82A7F08F100A495C0 /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA359B72A7F08F100A495C0 /* FavoritesService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		1BA359AF2A7EF2F100A495C0 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		1BA359B32A7EF55A00A495C0 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		1BA359B52A7EF5B300A495C0 /* PeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
+		1BA359B72A7F08F100A495C0 /* FavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				1BA359AB2A7EF00500A495C0 /* MovieView.swift */,
 				1BA359AD2A7EF2A300A495C0 /* PeopleView.swift */,
 				1BA359AF2A7EF2F100A495C0 /* FavoritesView.swift */,
+				1BA359B72A7F08F100A495C0 /* FavoritesService.swift */,
 				1BA359A52A7EE32100A495C0 /* MovieService.swift */,
 				1BA359B52A7EF5B300A495C0 /* PeopleService.swift */,
 				1BA359B32A7EF55A00A495C0 /* ImageService.swift */,
@@ -283,6 +286,7 @@
 				1BA3597E2A7ED47900A495C0 /* ContentView.swift in Sources */,
 				1BA359A62A7EE32100A495C0 /* MovieService.swift in Sources */,
 				1BA3597C2A7ED47900A495C0 /* ios_movie_listApp.swift in Sources */,
+				1BA359B82A7F08F100A495C0 /* FavoritesService.swift in Sources */,
 				1BA359B02A7EF2F100A495C0 /* FavoritesView.swift in Sources */,
 				1BA359AA2A7EEA7B00A495C0 /* NavigationBar.swift in Sources */,
 				1BA359AE2A7EF2A300A495C0 /* PeopleView.swift in Sources */,
